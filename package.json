@@ -1,0 +1,22 @@
+{
+   "name": "api-example",
+   "version": "0.0.1",
+   "description": "Awesome project developed with TypeORM.",
+   "devDependencies": {
+      "@types/node": "14.0.13",
+      "ts-node": "8.10.2",
+      "typescript": "3.9.5"
+   },
+   "dependencies": {
+      "express": "4.17.1",
+      "pg": "8.2.1",
+      "reflect-metadata": "0.1.13",
+      "typeorm": "0.2.25"
+   },
+   "scripts": {
+      "start": "ts-node src/index.ts",
+      "init:migration": "typeorm migration:create -n $NAME",
+      "migration": "ts-node ./node_modules/typeorm/cli.js migration:run",
+      "migration:revert": "ts-node ./node_modules/typeorm/cli.js migration:revert"
+   }
+}
